@@ -1,1 +1,4 @@
 This document contains the essence of foo.  No bar allowed!
+
+Let's add some more essence...  I imagine that foo is boisterous,
+but not ostentatious.
