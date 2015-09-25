@@ -1,1 +1,4 @@
 This is bar's document, plain and simple.
+
+I imagine that bar is more straightforward,
+like Sam Elliot's character in "The Big Lebowski".
