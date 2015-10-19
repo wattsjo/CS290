@@ -1,0 +1,32 @@
+tfoot td {font-weight:bold;}
+.rowdef {font-style:italic;}
+tbody tr:nth-of-type(odd) {background:orange;}
+tbody tr:nth-of-type(even) {background:gray;}
+div.outer-content {
+    background-color:pink;
+    width:75%;
+    height:4em;
+    position:relative;
+    top:20px;
+}
+div.inner-content {
+    background-color:blue;
+    width:75%;
+    height:2em;
+    position:absolute;
+    top:25%;
+    left:12.5%;
+    text-align:center;
+}
+/* Everything below this point seems to collide up into the div above,
+   unless I manually move every subsequent element down, as well...
+   How can I make space that affects the entire page?
+ */
+#get-form {
+    position:relative;
+    top:40px;
+}
+#post-form {
+    position:relative;
+    top:60px;
+}
