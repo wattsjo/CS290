@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <title>John Watts - CS290 Week 2</title>
   </head>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <body>
-    <table>
+    <table class="ICF-table" border="1">
       <caption>
 	Foods that go well together<br>
 	Inspired by the Incompatible Food Triad puzzle
-	<a href="https://en.wikipedia.org/wiki/George_W._Hart
-		 #Incompatible_Food_Triad">[Wikipedia]</a>
+	<!-- Is there a way to continue a line in HTML without
+	     creating whitespace, e.g., in the URL?
+	  -->
+	<a href="https://en.wikipedia.org/wiki/George_W._Hart#Incompatible_Food_Triad">
+	  [Wikipedia]
+	</a>
       </caption>
       <thead>
 	<tr>
@@ -24,7 +29,7 @@
       </thead>
       <tbody>
 	<tr>
-	  <td><i>Chocolate</i></td>
+	  <td class="rowdef">Chocolate</td>
 	  <td>N/A</td>
 	  <td>Reese's</td>
 	  <td>Pollo con mole</td>
@@ -32,7 +37,7 @@
 	  <td>Filled candies</td>
 	</tr>
 	<tr>
-	  <td><i>Peanut butter</i></td>
+	  <td class="rowdef">Peanut butter</td>
 	  <td>Peanut butter brownies</td>
 	  <td>N/A</td>
 	  <td>Pad thai</td>
@@ -40,7 +45,7 @@
 	  <td>PB&amp;J!</td>
 	</tr>
 	<tr>
-	  <td><i>Chicken</i></td>
+	  <td class="rowdef">Chicken</td>
 	  <td>Choco Chicken? <a href="http://www.chocochicken.com">
 	      [link]</a></td>
 	  <td>Chinese cuisine</td>
@@ -49,10 +54,9 @@
 	  <td>Not so sure...</td>
 	</tr>
 	<tr>
-	  <td><i>Cheese</i></td>
+	  <td class="rowdef">Cheese</td>
 	  <td>The harsh reality... 
-	    <a href="http://www.extremechocolate.com/
-		     the-harsh-reality-of-chocolate-cheese.html">
+	    <a href="http://www.extremechocolate.com/the-harsh-reality-of-chocolate-cheese.html">
 	      [link]</a></td>
 	  <td>PB&amp;C sandwich?</td>
 	  <td>Chicken parmesan</td>
@@ -60,7 +64,7 @@
 	  <td>Not so sure...</td>
 	</tr>
 	<tr>
-	  <td><i>Jam</i></td>
+	  <td class="rowdef">Jam</td>
 	  <td>Raspberry chocolate cake</td>
 	  <td>Uncrustables&reg;</td>
 	  <td>Not so sure...</td>
@@ -70,13 +74,17 @@
       </tbody>
       <tfoot>
 	<tr>
-	  <td colspan="2">The Incompatible Food Triad puzzle:</td>
-	  <td colspan="4">Find three foods which, in pairs,
-	    go well together, but are terrible all together!</td>
+	  <td colspan="2">
+	    The Incompatible Food Triad puzzle:
+	  </td>
+	  <td colspan="4">
+	    Find three foods which, in pairs, go well together, 
+	    but are terrible all together!
+	  </td>
 	</tr>
       </tfoot>
     </table>
-    <dl>
+    <dl border="1">
       <dt>My favorite solution:</dt>
       <dd>
 	<ul>
@@ -103,12 +111,76 @@
       </dd>
     </dl>
     <div class="outer-content"><div class="inner-content">
-	Reese's Cups with jam are delicious!
+	  Reese's Cups with jam are delicious!
       </div>
     </div>
-    <form action="http://classes.engr.oregonstate.edu/eecs
-		  /winter2015/cs290-400/tools/class-content
-		  /form_tests/check_request.php"
+    <form id="get-form"
+	  action="http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/class-content/form_tests/check_request.php"
 	  method="get" title="A &quot;GET&quot; form!">
       <fieldset>
-	
+	<legend>A &quot;GET&quot; form!</legend>
+	<label>Your text:
+	  <input type="text" name="text_input" size="20"
+		 maxlength="100" />
+	</label>
+	<br />
+	<label>Your number:
+	  <input type="number" name="numerical_input"
+		 size="20" maxlength="100" />
+	</label>
+	<br />
+	<label>Your password:
+	  <input type="password" name="password_input"
+		 size="20" maxlength="100" />
+	</label>
+	<p>What should be included in the next IFT solution?
+	  <br />
+	  <label>
+	    <input type="radio" name="candy" value="Snickers" />Snickers
+	  </label>
+	  <label>
+	    <input type="radio" name="candy" value="Skittles" />Skittles
+	  </label>
+	  <label>
+	    <input type="radio" name="candy" value="Mentos" />Mentos
+	  </label>
+	</p>
+	<input type="submit" name="Submit" value="Submit" />
+      </fieldset>
+    </form>
+    <form id="post-form"
+	  action="http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/class-content/form_tests/check_request.php"
+	  method="post" title="A &quot;GET&quot; form!">
+      <fieldset>
+	<legend>A &quot;POST&quot; form!</legend>
+	<label>Your text:
+	  <input type="text" name="text_input" size="20"
+		 maxlength="100" />
+	</label>
+	<br />
+	<label>Your number:
+	  <input type="number" name="numerical_input"
+		 size="20" maxlength="100" />
+	</label>
+	<br />
+	<label>Your password:
+	  <input type="password" name="password_input"
+		 size="20" maxlength="100" />
+	</label>
+	<p>What should be included in the next IFT solution?
+	  <br />
+	  <label>
+	    <input type="radio" name="candy" value="Snickers" />Snickers
+	  </label>
+	  <label>
+	    <input type="radio" name="candy" value="Skittles" />Skittles
+	  </label>
+	  <label>
+	    <input type="radio" name="candy" value="Mentos" />Mentos
+	  </label>
+	</p>
+	<input type="submit" name="Submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
